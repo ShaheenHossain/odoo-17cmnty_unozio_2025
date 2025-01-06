@@ -71,9 +71,9 @@ insertRecords("res.partner", [
     },
     {
         active: false,
-        display_name: "OdooBot",
+        display_name: "UnozioBot",
         id: TEST_USER_IDS.odoobotId,
         im_status: "bot",
-        name: "OdooBot",
+        name: "UnozioBot",
     },
 ]);

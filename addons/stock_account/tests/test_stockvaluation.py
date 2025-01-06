@@ -4339,7 +4339,7 @@ class TestStockValuation(TestStockValuationBase):
             ('stock_move_id', '=', False),
         ]).account_move_id
 
-        self.assertIn('OdooBot changed stock valuation from  15.0 to 25.0 -', account_move.line_ids[0].name)
+        self.assertIn('UnozioBot changed stock valuation from  15.0 to 25.0 -', account_move.line_ids[0].name)
 
     def test_journal_entries_from_change_product_cost_method(self):
         """ Changing between non-standard cost methods when an underlying product has real_time

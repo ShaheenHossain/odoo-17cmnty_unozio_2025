@@ -1115,11 +1115,11 @@ class TestDiscussFullPerformance(HttpCase):
             'mt_comment_id': self.env['ir.model.data']._xmlid_to_res_id('mail.mt_comment'),
             'odoobot': {
                 'active': False,
-                'email': 'odoobot@example.com',
+                'email': 'unoziobot@example.com',
                 'id': self.user_root.partner_id.id,
                 'im_status': 'bot',
                 'is_company': False,
-                'name': 'OdooBot',
+                'name': 'UnozioBot',
                 'out_of_office_date_end': False,
                 'type': "partner",
                 'user': {

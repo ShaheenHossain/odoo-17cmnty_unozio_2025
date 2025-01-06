@@ -91,12 +91,12 @@
                                     </div>
                                 </setting>
                                 <field name="company_id" invisible="1"/>
-                                <setting id="inter_company" string="Inter-Company Transactions" company_dependent="1" help="Automatically generate counterpart documents for orders/invoices between companies" groups="base.group_multi_company" title="Configure company rules to automatically create SO/PO when one of your company sells/buys to another of your company.">
+<!--                                <setting id="inter_company" string="Inter-Company Transactions" company_dependent="1" help="Automatically generate counterpart documents for orders/invoices between companies" groups="base.group_multi_company" title="Configure company rules to automatically create SO/PO when one of your company sells/buys to another of your company.">
                                     <field name="module_account_inter_company_rules" widget="upgrade_boolean"/>
                                     <div class="content-group" invisible="not module_account_inter_company_rules" id="inter_companies_rules">
                                         <div class="mt16 text-warning"><strong>Save</strong> this page and come back here to set up the feature.</div>
                                     </div>
-                                </setting>
+                                </setting>-->
                             </block>
                         </div>
                         <div id="emails"/>
@@ -104,7 +104,7 @@
                         <div id="contacts_settings">
                             <block title="Contacts" name="contacts_setting_container">
                                 <setting id="sms" string="Send SMS" documentation="/applications/marketing/sms_marketing/pricing/pricing_and_faq.html" help="Send texts to your contacts" />
-                                <setting help="Automatically enrich your contact base with company data" title="When populating your address book, Odoo provides a list of matching companies. When selecting one item, the company data and logo are auto-filled." id="partner_autocomplete">
+                                <setting help="Automatically enrich your contact base with company data" title="When populating your address book, Unozio provides a list of matching companies. When selecting one item, the company data and logo are auto-filled." id="partner_autocomplete">
                                     <field name="module_partner_autocomplete"/>
                                 </setting>
                         </block>
@@ -119,7 +119,7 @@
                                 </div>
                             </div>
                         </setting>
-                        <setting string="API Keys" help="API Keys allow your users to access Odoo with external tools when multi-factor authentication is enabled." groups="base.group_system">
+                        <setting string="API Keys" help="API Keys allow your users to access Unozio with external tools when multi-factor authentication is enabled." groups="base.group_system">
                             <button type="action" name="%(base.action_apikeys_admin)d" string="Manage API Keys" icon="oi-arrow-right" class="btn-link"/>
                         </setting>
                         <setting string="Import &amp; Export" help="Allow users to import data from CSV/XLS/XLSX/ODS files" documentation="/applications/general/export_import_data.html" groups="base.group_no_one" id="allow_import">
@@ -131,8 +131,8 @@
                     </block>
 
                     <block title="Progressive Web App" id="pwa_settings" groups="base.group_no_one">
-                        <setting help="This name will be used for the application when Odoo is installed through the browser.">
-                            <field name="web_app_name" placeholder="Odoo"/>
+                        <setting help="This name will be used for the application when Unozio is installed through the browser.">
+                            <field name="web_app_name" placeholder="Unozio"/>
                         </setting>
                     </block>
 
@@ -191,18 +191,18 @@
                             <block title="About" name="about_setting_container">
                                 <setting id='appstore'>
                                     <div class="d-flex">
-                                        <div>
-                                            <!-- FIXME Those links are defined directly in the template which means that we will have to
-                                            update the template code is the link ever changes -->
+<!--                                        <div>
+                                            &lt;!&ndash; FIXME Those links are defined directly in the template which means that we will have to
+                                            update the template code is the link ever changes &ndash;&gt;
                                             <a class="d-block mx-auto" href="https://play.google.com/store/apps/details?id=com.odoo.mobile" target="blank">
                                                 <img alt="On Google Play" class="d-block mx-auto img img-fluid" src="/base_setup/static/src/img/google_play.png"/>
                                             </a>
-                                        </div>
-                                        <div>
+                                        </div>-->
+                            <!--            <div>
                                             <a class='d-block mx-auto' href="https://itunes.apple.com/us/app/odoo/id1272543640" target="blank">
                                                 <img alt="On Apple Store" class="d-block mx-auto img img-fluid" src="/base_setup/static/src/img/app_store.png"/>
                                             </a>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </setting>
                                 <widget name='res_config_edition'/>

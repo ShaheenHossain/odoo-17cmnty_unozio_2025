@@ -505,7 +505,7 @@ class TestAccountPaymentTerms(AccountTestInvoicingCommon):
     def test_payment_term_multi_company(self):
         """
         Ensure that the payment term is determined by `move.company_id` rather than `user.company_id`.
-        OdooBot has `res.company(1)` set as the default company. The test checks that the payment term correctly reflects
+        UnozioBot has `res.company(1)` set as the default company. The test checks that the payment term correctly reflects
         the company associated with the move, independent of the user's default company.
         """
         user_company, other_company = self.company_data_2.get('company'), self.company_data.get('company')
