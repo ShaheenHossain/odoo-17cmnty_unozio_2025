@@ -185,6 +185,7 @@
         </field>
     </record>
 
+
     <record id="action_sale_config_settings" model="ir.actions.act_window">
         <field name="name">Settings</field>
         <field name="res_model">res.config.settings</field>
@@ -193,5 +194,13 @@
         <field name="target">inline</field>
         <field name="context">{'module' : 'sale_management', 'bin_size': False}</field>
     </record>
+
+<!--
+
+    <record id="action_sale_config_settings" model="ir.actions.act_window">
+    </record>
+-->
+
+
 
 </odoo>
