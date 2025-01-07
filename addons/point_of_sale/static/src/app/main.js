@@ -45,7 +45,7 @@ whenReady(() => {
     // start application
     await whenReady();
     const app = new App(Chrome, {
-        name: "Odoo Point of Sale",
+        name: "Unozio Point of Sale",
         env,
         templates,
         dev: env.debug,

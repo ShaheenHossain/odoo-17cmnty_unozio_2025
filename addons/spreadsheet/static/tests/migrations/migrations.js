@@ -5,7 +5,7 @@ import { Model } from "@odoo/o-spreadsheet";
 
 QUnit.module("spreadsheet > migrations");
 
-QUnit.test("Odoo formulas are migrated", (assert) => {
+QUnit.test("Unozio formulas are migrated", (assert) => {
     const data = {
         sheets: [
             {
@@ -376,7 +376,7 @@ QUnit.test("group year/quarter/month filters to a single filter type", (assert) 
     ]);
 });
 
-QUnit.test("Odoo version is exported", (assert) => {
+QUnit.test("Unozio version is exported", (assert) => {
     const model = new Model();
     assert.strictEqual(model.exportData().odooVersion, ODOO_VERSION);
 });

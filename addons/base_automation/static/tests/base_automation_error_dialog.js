@@ -64,7 +64,7 @@ QUnit.module("base_automation", {}, function () {
         };
 
         const error = makeServerError({
-            subType: "Odoo Client Error",
+            subType: "Unozio Client Error",
             message: "Message",
             context: errorContext,
         });
@@ -100,7 +100,7 @@ QUnit.module("base_automation", {}, function () {
         assert.expect(3);
 
         const error = makeServerError({
-            subType: "Odoo Client Error",
+            subType: "Unozio Client Error",
             message: "Message",
         });
 
@@ -132,7 +132,7 @@ QUnit.module("base_automation", {}, function () {
         };
 
         const error = makeServerError({
-            subType: "Odoo Client Error",
+            subType: "Unozio Client Error",
             message: "Message",
             context: errorContext,
         });

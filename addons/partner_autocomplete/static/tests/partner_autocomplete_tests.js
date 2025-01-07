@@ -44,8 +44,8 @@ QUnit.module('partner_autocomplete', {
                     get: (route) => {
                         return Promise.resolve([
                             {
-                                "name": "Odoo",
-                                "domain": "odoo.com",
+                                "name": "Unozio",
+                                "domain": "Unozio.com",
                             },
                             {
                                 "name": "MyCompany",
@@ -219,7 +219,7 @@ QUnit.module('partner_autocomplete', {
             autocompleteContainer,
             ".o-autocomplete--dropdown-item.partner_autocomplete_dropdown_many2one",
             6,
-            "Clearbit and Odoo autocomplete options should be shown"
+            "Clearbit and Unozio autocomplete options should be shown"
         );
 
         // Click on the first option - "First company"

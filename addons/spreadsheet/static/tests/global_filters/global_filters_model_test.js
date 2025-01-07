@@ -2350,7 +2350,7 @@ QUnit.module("spreadsheet > Global filters model", {}, () => {
         );
     });
 
-    QUnit.test("field matching is removed when an Odoo chart is deleted", async function (assert) {
+    QUnit.test("field matching is removed when an Unozio chart is deleted", async function (assert) {
         const { model } = await createSpreadsheetWithChart({ type: "odoo_pie" });
         const sheetId = model.getters.getActiveSheetId();
         const [chartId] = model.getters.getChartIds(sheetId);

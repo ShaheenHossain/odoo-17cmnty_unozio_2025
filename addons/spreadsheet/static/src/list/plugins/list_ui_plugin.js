@@ -217,7 +217,7 @@ export class ListUIPlugin extends spreadsheet.UIPlugin {
      * Extract the position of the records asked in the given formula and
      * increase the max position of the corresponding data source.
      *
-     * @param {string} content Odoo list formula
+     * @param {string} content Unozio list formula
      */
     _addListPositionToDataSource(cell) {
         if (getNumberOfListFormulas(cell.compiledFormula.tokens) !== 1) {

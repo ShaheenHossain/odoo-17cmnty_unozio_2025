@@ -29,7 +29,7 @@ class IapEnrichAPI(models.AbstractModel):
           * InsufficientCreditError: {
             "credit": 4.0,
             "service_name": "reveal",
-            "base_url": "https://iap.odoo.com/iap/1/credit",
+            "base_url": "https://unozio.com",
             "message": "You don't have enough credits on your account to use this service."
             }
         """

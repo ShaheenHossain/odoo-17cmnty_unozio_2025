@@ -676,13 +676,13 @@ class TestQWebNS(TransactionCase):
         """
         tempate = """
             <rss xmlns:g="http://base.google.com/ns/1.0" version="2.0">
-                <g:brand>Unozio</g:brand>
+                <g:brand>Odoo</g:brand>
                 <g:link>My Link</g:link>
             </rss>
         """
         expected_result = """
             <rss xmlns:g="http://base.google.com/ns/1.0" version="2.0">
-                <g:brand>Unozio</g:brand>
+                <g:brand>Odoo</g:brand>
                 <g:link>My Link</g:link>
             </rss>
 
@@ -3138,7 +3138,7 @@ class TestQwebCache(TransactionCase):
         expected = dedent("""
             <html>
                 <head>
-                    <title>Unozio</title>
+                    <title>Odoo</title>
                 </head>
                 <body>
                     <section class="toto">

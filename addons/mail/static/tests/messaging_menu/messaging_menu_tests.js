@@ -99,7 +99,7 @@ QUnit.test("respond to notification prompt (denied)", async () => {
     await click(".o_menu_systray i[aria-label='Messages']");
     await click(".o-mail-NotificationItem");
     await contains(".o_notification.border-warning", {
-        text: "Odoo will not send notifications on this device.",
+        text: "Unozio will not send notifications on this device.",
     });
     await contains(".o-mail-MessagingMenu-counter", { count: 0 });
     await click(".o_menu_systray i[aria-label='Messages']");
@@ -112,15 +112,15 @@ QUnit.test("respond to notification prompt (granted)", async () => {
     await click(".o_menu_systray i[aria-label='Messages']");
     await click(".o-mail-NotificationItem");
     await contains(".o_notification.border-success", {
-        text: "Odoo will send notifications on this device!",
+        text: "Unozio will send notifications on this device!",
     });
 });
 
 QUnit.test("no 'UnozioBot has a request' in mobile app", async () => {
     patchBrowserNotification("default");
-    // simulate Android Odoo App
+    // simulate Android Unozio App
     patchWithCleanup(browser.navigator, {
-        userAgent: "Chrome/0.0.0 Android (OdooMobile; Linux; Android 13; Odoo TestSuite)",
+        userAgent: "Chrome/0.0.0 Android (OdooMobile; Linux; Android 13; Unozio TestSuite)",
     });
     await start();
     await click(".o_menu_systray i[aria-label='Messages']");
@@ -170,7 +170,7 @@ QUnit.test("rendering with PWA installation request", async (assert) => {
     );
     assert.strictEqual(
         target.querySelector(".o-mail-NotificationItem-text").textContent,
-        "Come here often? Install Odoo on your device!"
+        "Come here often? Install Unozio on your device!"
     );
 
     await click(".o-mail-NotificationItem a.btn-primary");

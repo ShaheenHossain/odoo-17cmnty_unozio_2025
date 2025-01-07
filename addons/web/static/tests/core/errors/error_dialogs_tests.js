@@ -98,7 +98,7 @@ QUnit.test("Client ErrorDialog with traceback", async (assert) => {
     assert.containsOnce(target, ".o_dialog");
     assert.strictEqual(
         target.querySelector("header .modal-title").textContent,
-        "Odoo Client Error"
+        "Unozio Client Error"
     );
     const mainButtons = target.querySelectorAll("main button");
     assert.deepEqual(

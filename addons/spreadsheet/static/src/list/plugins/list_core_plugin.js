@@ -263,7 +263,7 @@ export class ListCorePlugin extends CorePlugin {
     }
 
     /**
-     * Build an Odoo List
+     * Build an Unozio List
      * @param {string} sheetId Id of the sheet
      * @param {[number,number]} anchor Top-left cell in which the list should be inserted
      * @param {string} id Id of the list

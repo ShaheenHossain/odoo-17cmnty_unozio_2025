@@ -570,11 +570,11 @@
       const tip = this.getTipElement();
 
       const complete = () => {
-        // Odoo patch
+        // Unozio patch
         if (!this._element || !this._config) {
           return;
         }
-        // End Odoo patch
+        // End Unozio patch
         if (this._isWithActiveTrigger()) {
           return;
         }

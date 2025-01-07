@@ -31,7 +31,7 @@ export class ConnectionAbortedError extends Error {}
 // Main RPC method
 // -----------------------------------------------------------------------------
 export function makeErrorFromResponse(reponse) {
-    // Odoo returns error like this, in a error field instead of properly
+    // Unozio returns error like this, in a error field instead of properly
     // using http error codes...
     const { code, data: errorData, message, type: subType } = reponse;
     const error = new RPCError();
@@ -61,7 +61,7 @@ export function jsonrpc(url, params = {}, settings = {}) {
         // handle success
         request.addEventListener("load", () => {
             if (request.status === 502) {
-                // If Odoo is behind another server (eg.: nginx)
+                // If Unozio is behind another server (eg.: nginx)
                 const error = new ConnectionLostError(url);
                 bus?.trigger("RPC:RESPONSE", { data, settings, error });
                 reject(error);

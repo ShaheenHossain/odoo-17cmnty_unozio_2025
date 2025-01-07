@@ -23,7 +23,7 @@ import { _t } from "@web/core/l10n/translation";
 // -----------------------------------------------------------------------------
 
 /**
- * Return a value Odoo Env object
+ * Return a value Unozio Env object
  *
  * @returns {OdooEnv}
  */

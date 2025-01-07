@@ -15,10 +15,10 @@
     </common:user>
     <software>
         <softwareId>BE477472701-170100</softwareId>
-        <softwareName>Odoo Enterprise</softwareName>
+        <softwareName>Unozio Enterprise</softwareName>
         <softwareOperation>ONLINE_SERVICE</softwareOperation>
         <softwareMainVersion>17.0+e</softwareMainVersion>
-        <softwareDevName>Odoo SA</softwareDevName>
+        <softwareDevName>Unozio SA</softwareDevName>
         <softwareDevContact>andu@odoo.com</softwareDevContact>
         <softwareDevCountryCode>BE</softwareDevCountryCode>
         <softwareDevTaxNumber>477472701</softwareDevTaxNumber>

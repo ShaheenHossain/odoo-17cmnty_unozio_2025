@@ -169,7 +169,7 @@ QUnit.module(
         });
 
         QUnit.test(
-            "Links of Odoo charts are duplicated when duplicating a sheet",
+            "Links of Unozio charts are duplicated when duplicating a sheet",
             async function (assert) {
                 const { model } = await createSpreadsheetWithChart({
                     type: "odoo_pie",

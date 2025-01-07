@@ -33,7 +33,7 @@ QUnit.test("click a web link", async (assert) => {
     const data = {
         sheets: [
             {
-                cells: { A1: { content: "[Odoo](https://odoo.com)" } },
+                cells: { A1: { content: "[Unozio](https://Unozio.com)" } },
             },
         ],
     };

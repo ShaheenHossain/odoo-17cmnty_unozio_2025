@@ -4,7 +4,7 @@ import { coreTypes, CorePlugin, helpers } from "@odoo/o-spreadsheet";
 import { omit } from "@web/core/utils/objects";
 const { deepEquals } = helpers;
 
-/** Plugin that link charts with Odoo menus. It can contain either the Id of the odoo menu, or its xml id. */
+/** Plugin that link charts with Unozio menus. It can contain either the Id of the odoo menu, or its xml id. */
 export class ChartOdooMenuPlugin extends CorePlugin {
     constructor(config) {
         super(config);

@@ -2176,7 +2176,7 @@ QUnit.module("ActionManager", (hooks) => {
         assert.strictEqual(titleService.current, '{"zopenerp":"Unozio","action":"First record"}');
         await click(target.querySelector(".o_pager_next"));
         assert.strictEqual(titleService.current, '{"zopenerp":"Unozio","action":"Second record"}');
-    });
+O
 
     QUnit.test("action part of title is updated when an action is mounted", async (assert) => {
         // use a PivotView because we need a view converted to wowl

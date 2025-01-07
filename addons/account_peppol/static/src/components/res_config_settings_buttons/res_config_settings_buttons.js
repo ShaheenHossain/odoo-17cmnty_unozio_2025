@@ -80,7 +80,7 @@ class PeppolSettingsButtons extends Component {
 
     showConfirmation(warning, methodName) {
         const message = _t(warning);
-        const confirmMessage = _t("You will not be able to send or receive Peppol documents in Odoo anymore. Are you sure you want to proceed?");
+        const confirmMessage = _t("You will not be able to send or receive Peppol documents in Unozio anymore. Are you sure you want to proceed?");
         this.dialogService.add(ConfirmationDialog, {
             body: markup(
                 `<div class="text-danger">${escape(message)}</div>
@@ -95,7 +95,7 @@ class PeppolSettingsButtons extends Component {
 
     migrate() {
         this.showConfirmation(
-            "This will migrate your Peppol registration away from Odoo. A migration key will be generated. \
+            "This will migrate your Peppol registration away from Unozio. A migration key will be generated. \
             If the other service does not support migration, consider deregistering instead.",
             "button_migrate_peppol_registration"
         )

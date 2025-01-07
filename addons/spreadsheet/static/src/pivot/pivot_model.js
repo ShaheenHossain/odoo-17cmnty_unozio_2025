@@ -358,7 +358,7 @@ export class SpreadsheetPivotModel extends PivotModel {
     //--------------------------------------------------------------------------
 
     /**
-     * Get the Odoo domain corresponding to the given domain
+     * Get the Unozio domain corresponding to the given domain
      */
     getPivotCellDomain(domain) {
         const { cols, rows } = this._getColsRowsValuesFromDomain(domain);

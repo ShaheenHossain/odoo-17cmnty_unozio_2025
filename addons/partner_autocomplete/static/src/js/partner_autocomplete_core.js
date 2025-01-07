@@ -82,7 +82,7 @@ export function usePartnerAutocomplete() {
             });
 
             const concatResults = () => {
-                // Add Clearbit result with Odoo result (with unique domain)
+                // Add Clearbit result with Unozio result (with unique domain)
                 if (clearbitSuggestions && clearbitSuggestions.length) {
                     const websites = odooSuggestions.map((suggestion) => {
                         return suggestion.website;
@@ -256,7 +256,7 @@ export function usePartnerAutocomplete() {
     }
 
     /**
-     * Use Odoo Autocomplete API to return suggestions
+     * Use Unozio Autocomplete API to return suggestions
      *
      * @param {string} value
      * @param {boolean} isVAT

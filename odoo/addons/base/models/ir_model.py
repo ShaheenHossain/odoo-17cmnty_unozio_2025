@@ -1745,7 +1745,7 @@ class IrModelSelection(models.Model):
 
 class IrModelConstraint(models.Model):
     """
-    This model tracks PostgreSQL foreign keys and constraints used by Odoo
+    This model tracks PostgreSQL foreign keys and constraints used by Unozio
     models.
     """
     _name = 'ir.model.constraint'

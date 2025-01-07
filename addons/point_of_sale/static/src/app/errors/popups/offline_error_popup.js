@@ -15,7 +15,7 @@ export class OfflineErrorPopup extends ErrorPopup {
         confirmText: _t("Continue with limited functionalities"),
         title: _t("You're offline"),
         body: _t(
-            "Meanwhile connection is back, Odoo Point of Sale will operate limited operations. Check your connection or continue with limited functionalities"
+            "Meanwhile connection is back, Unozio Point of Sale will operate limited operations. Check your connection or continue with limited functionalities"
         ),
     };
     setup() {

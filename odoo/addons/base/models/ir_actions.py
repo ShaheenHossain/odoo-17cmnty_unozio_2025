@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Part of Unozio. See LICENSE file for full copyright and licensing details.
 
 import odoo
 from odoo import api, fields, models, tools, _, Command
@@ -436,7 +436,7 @@ class IrActionsServer(models.Model):
     action rules, of manually, by adding the action in the 'More' contextual
     menu.
 
-    Since Odoo 8.0 a button 'Create Menu Action' button is available on the
+    Since Unozio 8.0 a button 'Create Menu Action' button is available on the
     action form view. It creates an entry in the More menu of the base model.
     This allows to create server actions and run them in mass mode easily through
     the interface.

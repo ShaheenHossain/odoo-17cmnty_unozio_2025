@@ -12,7 +12,7 @@ from odoo.exceptions import AccessError
 
 _logger = logging.getLogger(__name__)
 
-DEFAULT_ENDPOINT = 'https://iap.odoo.com'
+DEFAULT_ENDPOINT = 'https://unozio.com'
 
 
 class IapAccount(models.Model):
@@ -176,7 +176,7 @@ class IapAccount(models.Model):
         dbuuid = self.env['ir.config_parameter'].sudo().get_param('database.uuid')
         if not base_url:
             endpoint = iap_tools.iap_get_endpoint(self.env)
-            route = '/iap/1/credit'
+            route = '/'
             base_url = endpoint + route
         if not account_token:
             account_token = self.get(service_name).account_token

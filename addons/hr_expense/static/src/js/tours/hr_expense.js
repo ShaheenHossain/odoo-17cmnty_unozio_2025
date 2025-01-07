@@ -39,7 +39,7 @@ registry.category("web_tour.tours").add('hr_expense_tour' , {
 }, {
     trigger: '.o_form_status_indicator_dirty .o_form_button_save',
     extra_trigger: '.o_hr_expense_form_view_view',
-    content: markup(_t("Ready? You can save it manually or discard modifications from here. You don't <em>need to save</em> - Odoo will save eveyrthing for you when you navigate.")),
+    content: markup(_t("Ready? You can save it manually or discard modifications from here. You don't <em>need to save</em> - Unozio will save eveyrthing for you when you navigate.")),
     position: 'bottom',
 }, ...stepUtils.statusbarButtonsSteps(_t("Attach Receipt"), _t("Attach a receipt - usually an image or a PDF file.")),
 ...stepUtils.statusbarButtonsSteps(_t("Create Report"), _t("Create a report to submit one or more expenses to your manager.")),

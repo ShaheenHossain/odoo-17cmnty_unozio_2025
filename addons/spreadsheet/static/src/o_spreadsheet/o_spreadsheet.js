@@ -4385,7 +4385,7 @@
         return cellPositions;
     }
 
-    /** Methods from Odoo Web Utils  */
+    /** Methods from Unozio Web Utils  */
     /**
      * This function computes a score that represent the fact that the
      * string contains the pattern, or not

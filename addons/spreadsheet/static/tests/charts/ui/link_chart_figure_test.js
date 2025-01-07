@@ -195,7 +195,7 @@ QUnit.module(
                     odooMenuId: 1,
                 });
                 const chartMenu = model.getters.getChartOdooMenu(chartId);
-                assert.equal(chartMenu.id, 1, "Odoo menu is linked to chart");
+                assert.equal(chartMenu.id, 1, "Unozio menu is linked to chart");
                 await nextTick();
                 const externalRefIcon = fixture.querySelector(".o-chart-external-link");
                 assert.ok(externalRefIcon);
@@ -234,7 +234,7 @@ QUnit.module(
                     odooMenuId: 1,
                 });
                 const chartMenu = model.getters.getChartOdooMenu(chartId);
-                assert.equal(chartMenu.id, 1, "Odoo menu is linked to chart");
+                assert.equal(chartMenu.id, 1, "Unozio menu is linked to chart");
                 model.updateMode("dashboard");
                 await nextTick();
                 assert.containsNone(fixture, ".o-chart-external-link", "No link icon in dashboard");
@@ -258,7 +258,7 @@ QUnit.module(
                     odooMenuId: 2,
                 });
                 const chartMenu = model.getters.getChartOdooMenu(chartId);
-                assert.equal(chartMenu.id, 2, "Odoo menu is linked to chart");
+                assert.equal(chartMenu.id, 2, "Unozio menu is linked to chart");
                 await nextTick();
 
                 await clickChartExternalLink(fixture);
@@ -283,7 +283,7 @@ QUnit.module(
                     odooMenuId: 2,
                 });
                 const chartMenu = model.getters.getChartOdooMenu(chartId);
-                assert.equal(chartMenu.id, 2, "Odoo menu is linked to chart");
+                assert.equal(chartMenu.id, 2, "Unozio menu is linked to chart");
                 await nextTick();
 
                 await click(fixture, ".o-chart-container");

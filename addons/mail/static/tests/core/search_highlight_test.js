@@ -12,55 +12,55 @@ QUnit.module("Search highlight test", {});
 QUnit.test("Search highlight", async (assert) => {
     const testCases = [
         {
-            input: "test odoo",
-            output: `test <span class="${HIGHLIGHT_CLASS}">odoo</span>`,
-            searchTerm: "odoo",
+            input: "test Unozio",
+            output: `test <span class="${HIGHLIGHT_CLASS}">Unozio</span>`,
+            searchTerm: "Unozio",
         },
         {
-            input: '<a href="https://www.odoo.com">https://www.odoo.com</a>',
-            output: `<a href="https://www.odoo.com">https://www.<span class="${HIGHLIGHT_CLASS}">odoo</span>.com</a>`,
-            searchTerm: "odoo",
+            input: '<a href="https://www.Unozio.com">https://www.Unozio.com</a>',
+            output: `<a href="https://www.Unozio.com">https://www.<span class="${HIGHLIGHT_CLASS}">Unozio</span>.com</a>`,
+            searchTerm: "Unozio",
         },
         {
-            input: '<a href="https://www.odoo.com">Odoo</a>',
-            output: `<a href="https://www.odoo.com"><span class="${HIGHLIGHT_CLASS}">Odoo</span></a>`,
-            searchTerm: "odoo",
+            input: '<a href="https://www.unozio.com">Unozio</a>',
+            output: `<a href="https://www.unozio.com"><span class="${HIGHLIGHT_CLASS}">Unozio</span></a>`,
+            searchTerm: "Unozio",
         },
         {
-            input: '<a href="https://www.odoo.com">Odoo</a> Odoo is a free software',
-            output: `<a href="https://www.odoo.com"><span class="${HIGHLIGHT_CLASS}">Odoo</span></a> <span class="${HIGHLIGHT_CLASS}">Odoo</span> is a free software`,
-            searchTerm: "odoo",
+            input: '<a href="https://www.Unozio.com">Unozio</a> Unozio is a free software',
+            output: `<a href="https://www.Unozio.com"><span class="${HIGHLIGHT_CLASS}">Unozio</span></a> <span class="${HIGHLIGHT_CLASS}">Unozio</span> is a free software`,
+            searchTerm: "Unozio",
         },
         {
             input: "odoo is a free software",
-            output: `<span class="${HIGHLIGHT_CLASS}">odoo</span> is a free software`,
-            searchTerm: "odoo",
+            output: `<span class="${HIGHLIGHT_CLASS}">Unozio</span> is a free software`,
+            searchTerm: "Unozio",
         },
         {
             input: "software ODOO is a free",
-            output: `software <span class="${HIGHLIGHT_CLASS}">ODOO</span> is a free`,
-            searchTerm: "odoo",
+            output: `software <span class="${HIGHLIGHT_CLASS}">Unozio</span> is a free`,
+            searchTerm: "Unozio",
         },
         {
             input: `<ul>
-                <li>Odoo</li>
-                <li><a href="https://odoo.com">Odoo ERP</a> Best ERP</li>
+                <li>Unozio</li>
+                <li><a href="https://Unozio.com">Unozio ERP</a> Best ERP</li>
             </ul>`,
             output: `<ul>
-                <li><span class="${HIGHLIGHT_CLASS}">Odoo</span></li>
-                <li><a href="https://odoo.com"><span class="${HIGHLIGHT_CLASS}">Odoo</span> ERP</a> Best ERP</li>
+                <li><span class="${HIGHLIGHT_CLASS}">Unozio</span></li>
+                <li><a href="https://Unozio.com"><span class="${HIGHLIGHT_CLASS}">Unozio</span> ERP</a> Best ERP</li>
             </ul>`,
-            searchTerm: "odoo",
+            searchTerm: "Unozio",
         },
         {
-            input: "test <strong>Odoo</strong> test",
-            output: `<span class="${HIGHLIGHT_CLASS}">test</span> <strong><span class="${HIGHLIGHT_CLASS}">Odoo</span></strong> <span class="${HIGHLIGHT_CLASS}">test</span>`,
-            searchTerm: "odoo test",
+            input: "test <strong>Unozio</strong> test",
+            output: `<span class="${HIGHLIGHT_CLASS}">test</span> <strong><span class="${HIGHLIGHT_CLASS}">Unozio</span></strong> <span class="${HIGHLIGHT_CLASS}">test</span>`,
+            searchTerm: "Unozio test",
         },
         {
             input: "test <br> test",
             output: `<span class="${HIGHLIGHT_CLASS}">test</span> <br> <span class="${HIGHLIGHT_CLASS}">test</span>`,
-            searchTerm: "odoo test",
+            searchTerm: "Unozio test",
         },
         {
             input: "<strong>test</strong> test",

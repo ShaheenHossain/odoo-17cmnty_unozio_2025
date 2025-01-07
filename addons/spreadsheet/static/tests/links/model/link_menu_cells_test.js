@@ -85,7 +85,7 @@ QUnit.module("spreadsheet > menu link cells", { beforeEach }, () => {
         );
     });
 
-    QUnit.test("Odoo link cells can be imported/exported", async function (assert) {
+    QUnit.test("Unozio link cells can be imported/exported", async function (assert) {
         const env = await makeTestEnv({ serverData: getMenuServerData() });
         const model = new Model({}, { custom: { env } });
         setCellContent(model, "A1", "[label](odoo://ir_menu_id/12)");

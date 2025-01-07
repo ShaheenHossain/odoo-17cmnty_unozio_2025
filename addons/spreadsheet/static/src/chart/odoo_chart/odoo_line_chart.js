@@ -56,7 +56,7 @@ function createOdooChartRuntime(chart, getters) {
         const color = colors.next();
         const backgroundRGBA = colorToRGBA(color);
         if (chart.stacked) {
-            // use the transparency of Odoo to keep consistency
+            // use the transparency of Unozio to keep consistency
             backgroundRGBA.a = LINE_FILL_TRANSPARENCY;
         }
         if (chart.cumulative) {

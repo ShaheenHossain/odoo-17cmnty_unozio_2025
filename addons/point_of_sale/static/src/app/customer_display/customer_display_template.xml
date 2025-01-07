@@ -79,7 +79,7 @@
                     <t t-call="point_of_sale.CustomerFacingDisplayPaymentLines" />
                 </div>
 
-                <!-- Odoo Logo -->
+                <!-- Unozio Logo -->
                 <div class="pos-odoo_logo_container">
                     <span>Powered by </span>
                     <div class="logo" />

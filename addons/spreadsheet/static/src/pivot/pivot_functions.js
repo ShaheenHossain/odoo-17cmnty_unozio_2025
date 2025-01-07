@@ -45,7 +45,7 @@ function assertDomainLength(domain) {
 const ODOO_FILTER_VALUE = {
     description: _t("Return the current value of a spreadsheet filter."),
     args: [arg("filter_name (string)", _t("The label of the filter whose value to return."))],
-    category: "Odoo",
+    category: "Unozio",
     computeValueAndFormat: function (filterName) {
         const unEscapedFilterName = toString(filterName.value).replaceAll('\\"', '"');
         return this.getters.getFilterDisplayValue(unEscapedFilterName);
@@ -70,7 +70,7 @@ const ODOO_PIVOT = {
         assertDomainLength(args);
         return this.getters.getPivotCellValue(pivotId, measure, args);
     },
-    category: "Odoo",
+    category: "Unozio",
     computeFormat: function (pivotId, measureName, ...domain) {
         pivotId = toString(pivotId.value);
         const measure = toString(measureName.value);
@@ -89,7 +89,7 @@ const ODOO_PIVOT_HEADER = {
         arg("domain_field_name (string,optional,repeating)", _t("Field name.")),
         arg("domain_value (string,optional,repeating)", _t("Value.")),
     ],
-    category: "Odoo",
+    category: "Unozio",
     compute: function (pivotId, ...domain) {
         pivotId = toString(pivotId);
         const domainArgs = domain.map(toString);
@@ -178,7 +178,7 @@ const ODOO_PIVOT_TABLE = {
         }
         return result;
     },
-    category: "Odoo",
+    category: "Unozio",
     returns: ["RANGE<ANY>"],
 };
 

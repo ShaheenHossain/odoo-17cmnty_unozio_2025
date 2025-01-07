@@ -27,7 +27,7 @@ const fr_FR = {
 };
 
 QUnit.module("spreadsheet > odoo chart plugin", {}, () => {
-    QUnit.test("Can add an Odoo Bar chart", async (assert) => {
+    QUnit.test("Can add an Unozio Bar chart", async (assert) => {
         const { model } = await createSpreadsheetWithChart({ type: "odoo_bar" });
         const sheetId = model.getters.getActiveSheetId();
         assert.strictEqual(model.getters.getChartIds(sheetId).length, 1);
@@ -38,7 +38,7 @@ QUnit.module("spreadsheet > odoo chart plugin", {}, () => {
         assert.strictEqual(model.getters.getChartRuntime(chartId).chartJsConfig.type, "bar");
     });
 
-    QUnit.test("Can add an Odoo Line chart", async (assert) => {
+    QUnit.test("Can add an Unozio Line chart", async (assert) => {
         const { model } = await createSpreadsheetWithChart({ type: "odoo_line" });
         const sheetId = model.getters.getActiveSheetId();
         assert.strictEqual(model.getters.getChartIds(sheetId).length, 1);
@@ -49,7 +49,7 @@ QUnit.module("spreadsheet > odoo chart plugin", {}, () => {
         assert.strictEqual(model.getters.getChartRuntime(chartId).chartJsConfig.type, "line");
     });
 
-    QUnit.test("Can add an Odoo Pie chart", async (assert) => {
+    QUnit.test("Can add an Unozio Pie chart", async (assert) => {
         const { model } = await createSpreadsheetWithChart({ type: "odoo_pie" });
         const sheetId = model.getters.getActiveSheetId();
         assert.strictEqual(model.getters.getChartIds(sheetId).length, 1);
@@ -67,7 +67,7 @@ QUnit.module("spreadsheet > odoo chart plugin", {}, () => {
         assert.ok(model.getters.getChartDataSource(chartId));
     });
 
-    QUnit.test("Odoo bar chart runtime loads the data", async (assert) => {
+    QUnit.test("Unozio bar chart runtime loads the data", async (assert) => {
         const { model } = await createSpreadsheetWithChart({
             type: "odoo_bar",
             mockRPC: async function (route, args) {
@@ -98,7 +98,7 @@ QUnit.module("spreadsheet > odoo chart plugin", {}, () => {
         assert.verifySteps(["web_read_group"], "it should have loaded the data");
     });
 
-    QUnit.test("Odoo pie chart runtime loads the data", async (assert) => {
+    QUnit.test("Unozio pie chart runtime loads the data", async (assert) => {
         const { model } = await createSpreadsheetWithChart({
             type: "odoo_pie",
             mockRPC: async function (route, args) {
@@ -129,7 +129,7 @@ QUnit.module("spreadsheet > odoo chart plugin", {}, () => {
         assert.verifySteps(["web_read_group"], "it should have loaded the data");
     });
 
-    QUnit.test("Odoo line chart runtime loads the data", async (assert) => {
+    QUnit.test("Unozio line chart runtime loads the data", async (assert) => {
         const { model } = await createSpreadsheetWithChart({
             type: "odoo_line",
             mockRPC: async function (route, args) {
@@ -212,7 +212,7 @@ QUnit.module("spreadsheet > odoo chart plugin", {}, () => {
         );
     });
 
-    QUnit.test("Can import/export an Odoo chart", async (assert) => {
+    QUnit.test("Can import/export an Unozio chart", async (assert) => {
         const model = await createModelWithDataSource();
         insertChartInSpreadsheet(model, "odoo_line");
         const data = model.exportData();
@@ -282,7 +282,7 @@ QUnit.module("spreadsheet > odoo chart plugin", {}, () => {
         assert.verifySteps(["web_read_group"]);
     });
 
-    QUnit.test("Can undo/redo an Odoo chart creation", async (assert) => {
+    QUnit.test("Can undo/redo an Unozio chart creation", async (assert) => {
         const model = await createModelWithDataSource();
         insertChartInSpreadsheet(model, "odoo_line");
         const sheetId = model.getters.getActiveSheetId();
@@ -381,7 +381,7 @@ QUnit.module("spreadsheet > odoo chart plugin", {}, () => {
         assert.notOk(model.getters.getChartRuntime(chartId).chartJsConfig.options.scales.y.stacked);
     });
 
-    QUnit.test("Can copy/paste Odoo chart", async (assert) => {
+    QUnit.test("Can copy/paste Unozio chart", async (assert) => {
         const { model } = await createSpreadsheetWithChart({ type: "odoo_pie" });
         const sheetId = model.getters.getActiveSheetId();
         const chartId = model.getters.getChartIds(sheetId)[0];
@@ -403,7 +403,7 @@ QUnit.module("spreadsheet > odoo chart plugin", {}, () => {
         );
     });
 
-    QUnit.test("Can cut/paste Odoo chart", async (assert) => {
+    QUnit.test("Can cut/paste Unozio chart", async (assert) => {
         const { model } = await createSpreadsheetWithChart({ type: "odoo_pie" });
         const sheetId = model.getters.getActiveSheetId();
         const chartId = model.getters.getChartIds(sheetId)[0];
@@ -421,7 +421,7 @@ QUnit.module("spreadsheet > odoo chart plugin", {}, () => {
         );
     });
 
-    QUnit.test("Duplicating a sheet correctly duplicates Odoo chart", async (assert) => {
+    QUnit.test("Duplicating a sheet correctly duplicates Unozio chart", async (assert) => {
         const { model } = await createSpreadsheetWithChart({ type: "odoo_bar" });
         const sheetId = model.getters.getActiveSheetId();
         const secondSheetId = "secondSheetId";
@@ -602,7 +602,7 @@ QUnit.module("spreadsheet > odoo chart plugin", {}, () => {
         assert.strictEqual(model.getters.getOdooChartIds().length, 0);
     });
 
-    QUnit.test("Odoo chart legend color changes with background color update", async (assert) => {
+    QUnit.test("Unozio chart legend color changes with background color update", async (assert) => {
         const { model } = await createSpreadsheetWithChart({ type: "odoo_bar" });
         const sheetId = model.getters.getActiveSheetId();
         const chartId = model.getters.getChartIds(sheetId)[0];
@@ -644,7 +644,7 @@ QUnit.module("spreadsheet > odoo chart plugin", {}, () => {
     });
 
     QUnit.test(
-        "Displays correct thousand separator for positive value in Odoo Bar chart Y-axis",
+        "Displays correct thousand separator for positive value in Unozio Bar chart Y-axis",
         async (assert) => {
             const { model } = await createSpreadsheetWithChart({ type: "odoo_bar" });
             const sheetId = model.getters.getActiveSheetId();
@@ -662,7 +662,7 @@ QUnit.module("spreadsheet > odoo chart plugin", {}, () => {
     );
 
     QUnit.test(
-        "Thousand separator in Odoo Bar chart Y-axis is locale-dependent",
+        "Thousand separator in Unozio Bar chart Y-axis is locale-dependent",
         async (assert) => {
             const { model } = await createSpreadsheetWithChart({ type: "odoo_bar" });
             model.dispatch("UPDATE_LOCALE", { locale: fr_FR });
